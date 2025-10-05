@@ -1,0 +1,34 @@
+<!-- Grafic pentru costurile intervențiilor pe lună -->
+<div class="card mt-4">
+    <div class="card-header">
+        <h5>Costuri Intervenții pe Lună</h5>
+    </div>
+    <div class="card-body">
+        <canvas id="graficCosturiLunare" width="400" height="200"></canvas>
+    </div>
+</div>
+
+<script>
+    // Date pentru grafic (exemplu - trebuie adaptat din datele reale)
+    const ctx = document.getElementById('graficCosturiLunare').getContext('2d');
+    const grafic = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Ian', 'Feb', 'Mar', 'Apr', 'Mai', 'Iun', 'Iul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            datasets: [{
+                label: 'Costuri Intervenții (RON)',
+                data: [1200, 1900, 300, 500, 200, 300, 800, 1200, 600, 750, 900, 1100],
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
