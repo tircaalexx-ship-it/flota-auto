@@ -50,7 +50,6 @@ module.exports = (db, requireAuth) => {
                     success: true,
                     message: 'Mașină adăugată cu succes!',
                     id: this.lastID 
-                    
                 });
             }
         );
